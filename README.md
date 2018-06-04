@@ -5,7 +5,7 @@ _Functional Programming Helper Functions and Classes_
 [![Latest Stable Version](https://poser.pugx.org/ancarda/functional/v/stable)](https://packagist.org/packages/ancarda/functional)
 [![Total Downloads](https://poser.pugx.org/ancarda/functional/downloads)](https://packagist.org/packages/ancarda/functional)
 [![License](https://img.shields.io/github/license/ancarda/functional.svg)](https://choosealicense.com/licenses/mit/)
-[![Build Status](https://travis-ci.org/ancarda/functional.svg?branch=master)](https://travis-ci.org/ancarda/functional)
+[![Build Status](https://travis-ci.com/ancarda/functional.svg?branch=master)](https://travis-ci.com/ancarda/functional)
 [![Coverage Status](https://coveralls.io/repos/github/ancarda/functional/badge.svg?branch=master)](https://coveralls.io/github/ancarda/functional?branch=master)
 
 Ancarda\Functional (also known as "_FP Kit_") is a collection of helper functions and classes for PHP 7.0+ that makes basic Functional Programming a little easier. The `Operation` class allows modification to data in a way that is more intuitive and understandable than a series of `array_*` functions.
