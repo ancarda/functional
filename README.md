@@ -24,9 +24,9 @@ array_unique(
                 }
             )
         ),
-	    function (?array $carry, array $row): array {
-		    return array_merge($carry === null ? [] : $carry, $row);
-	    }
+        function (?array $carry, array $row): array {
+            return array_merge($carry === null ? [] : $carry, $row);
+        }
     )
 );
 ```
