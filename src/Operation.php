@@ -353,4 +353,16 @@ class Operation
 
         return $value;
     }
+
+    /**
+     * Execute this operation.
+     *
+     * @param mixed $input Input to use for this specific call.
+     * @throws Exception Various Exceptions from Modifiers
+     * @return mixed Value from the last modifier.
+     */
+    public function __invoke($input = null)
+    {
+        return $this->realize($input);
+    }
 }

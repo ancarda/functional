@@ -140,4 +140,11 @@ final class OperationTest extends TestCase
         $o = $o->input([1, 2, 3])->reverse();
         $this->assertSame([6, 5, 4], $o->realize([4, 5, 6]));
     }
+
+    public function testOperationCanBeRealizedViaInvocation()
+    {
+        $o = (new Operation)->reverse();
+        $actual = $o([1, 2, 3]);
+        $this->assertSame([3, 2, 1], $actual);
+    }
 }
