@@ -38,10 +38,20 @@ use \LogicException;
  *
  * Calling realize() with no functions will return the initial
  * value, or null if there is no initial value.
+ *
+ * @author  Mark Dain <mark@markdain.net>
+ * @license https://choosealicense.com/licenses/mit/ (MIT License)
  */
 class Operation
 {
+    /**
+     * @var mixed Initial value, if specified.
+     */
     private $initial = null;
+
+    /**
+     * @var array List of operations to execute.
+     */
     private $operations = [];
 
     /**
@@ -173,8 +183,8 @@ class Operation
      * Pushes a modifier that pushes an array or string on the
      * end of the value.
      *
-     * @throws LogicException If type is not array or string.
      * @param string|array $append
+     * @throws LogicException If type is not array or string.
      * @return Operation
      */
     public function append($append): self
@@ -340,8 +350,8 @@ class Operation
      * Execute this operation.
      *
      * @param mixed $input Input to use for this specific call.
+     * @throws Exception Various Exceptions from Modifiers.
      * @return mixed Value from the last modifier.
-     * @throws Exception Various Exceptions from Modifiers
      */
     public function realize($input = null)
     {
