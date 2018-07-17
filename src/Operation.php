@@ -339,12 +339,13 @@ class Operation
     /**
      * Execute this operation.
      *
+     * @param mixed $input Input to use for this specific call.
      * @return mixed Value from the last modifier.
      * @throws Exception Various Exceptions from Modifiers
      */
-    public function realize()
+    public function realize($input = null)
     {
-        $value = $this->initial;
+        $value = $input === null ? $this->initial : $input;
 
         foreach ($this->operations as $operation) {
             $value = $operation($value);

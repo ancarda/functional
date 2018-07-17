@@ -133,4 +133,11 @@ final class OperationTest extends TestCase
         $this->expectException(LogicException::class);
         $o->realize();
     }
+
+    public function testRealizeAcceptsInput()
+    {
+        $o = new Operation;
+        $o = $o->input([1, 2, 3])->reverse();
+        $this->assertSame([6, 5, 4], $o->realize([4, 5, 6]));
+    }
 }
